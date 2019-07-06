@@ -1,0 +1,100 @@
+There are 12 additional themes that you can use without installing any other packages: 
+1.cerulean, 
+2.cosmo 
+3.flatly
+4.journal 
+5.lumen
+6.paper
+7.readable
+8.sandstone 
+9.simplex 
+10.spacelab
+11.united 
+12.yeti 
+
+# hrbrthemes Package
+1.ipsum
+
+# prettydoc Package
+1. architect
+2. cayman
+3. hpstr
+4. leonids
+5. tactile
+
+# rmdformats
+1. html_clean
+2. html_docco
+3. material
+4. readthedown
+
+
+# tint Package
+1. tintHtml
+
+# tufte Package
+1. tufte_html
+
+
+# highlight specifies the syntax highlighting style for code chunks.
+
+1.default
+2.tango
+3.pygments
+4.kate
+5.monochrome
+6.espresso
+7.zenburn
+8.haddock
+9.textmate
+
+
++ eval = FALSE : prevents code from being evaluated (e.g= Function)
++ include = FALSE - runs the code but doesn’t show the code or results in the final document.
++ echo = FALSE - prevents code from showing in the final output, but does show the results of the code.
++ message = FALSE /warning = FALSE - prevents messages or warnings from appearing in the final document.
++ results = 'hide' - hides printed output.
++ error = TRUE - causes the document to continue knitting and rendering even if the code generates a fatal error.
++ cache = TRUE
+
+```{r processed_data, cache = TRUE}
+processed_data <- rawdata %>% 
+  filter(!is.na(import_var)) %>% 
+  mutate(new_variable = complicated_transformation(x, y, z))
+`
+
+# Global options
+
+knitr::opts_chunk$set()
+echo = FALSE : hides the code by default in all code chunks
+echo = TRUE : 
+
+# Inline code
++ `r ` syntax
++ `r nrow(gun_deaths) - nrow(youth)` 
+
+
+# YAML header (Yet Another Markup Language)
+
++ toc: true (Table of Content)
++ toc_float: true
++ toc_depth (the default is 3)
++ code_folding: hide
++ keep_md: true (keep a copy of the Markdown file)
++
+
+
+# PDF
+output: pdf_document
+fontsize: 11pt
+geometry: margin=1in
+keep_tex: true (first to a .tex file, and then use the LATEX engine to convert to PDF)
+
+
+# Presentations
+
++ ioslides - HTML presentation with ioslides
++ reveal.js - HTML presentation with reveal.js
++ Slidy - HTML presentation with W3C Slidy
++ Beamer - PDF presentation with LATEX Beamer
+
